@@ -1,10 +1,11 @@
+const Platzi_math = {}
 /*function of average */
-function average (list){
+Platzi_math.average = function(list){
     const addition = list.reduce((a,b) => a + b)
     return addition/list.length
 }
 /*funtion of median */
-function median (list){
+Platzi_math.median = function(list){
     /* put in order the data */
     const orderedArray = list.sort((a,b) => a - b)
     /* if it is an even array */
@@ -21,7 +22,7 @@ function median (list){
 }
 /*function for mode */
 
-function mode (list){
+Platzi_math.mode = function(list){
     const obj = {}
     list.forEach(element => obj[element]? obj[element]++ : obj[element] = 1)
     const newArray = Object.entries(obj)
