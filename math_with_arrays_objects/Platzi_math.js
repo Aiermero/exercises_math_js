@@ -16,6 +16,6 @@ function median (list){
     /* if it is an odd array */
     else {
         const middleNum = Math.floor(orderedArray.length/2)
-        return list[middleNum]
+        return orderedArray[middleNum]
     }
 }
