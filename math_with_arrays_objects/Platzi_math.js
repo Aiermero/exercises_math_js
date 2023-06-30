@@ -19,3 +19,13 @@ function median (list){
         return orderedArray[middleNum]
     }
 }
+/*function for mode */
+
+function mode (list){
+    const obj = {}
+    list.forEach(element => obj[element]? obj[element]++ : obj[element] = 1)
+    const newArray = Object.entries(obj)
+    newArray.sort((a,b) => a[1] - b[1])
+    const mayorNum = newArray[newArray.length - 1]
+    console.log(mayorNum[0])
+  }
