@@ -12,7 +12,7 @@ Platzi_math.median = function(list){
     if(list.length % 2 == 0){
         const num1 = orderedArray.length/2
         const num2 = (orderedArray.length/2)-1
-        return  orderedArray[num1] + orderedArray[num2]
+        return  (orderedArray[num1] + orderedArray[num2])/2
     }
     /* if it is an odd array */
     else {
@@ -29,4 +29,4 @@ Platzi_math.mode = function(list){
     newArray.sort((a,b) => a[1] - b[1])
     const mayorNum = newArray[newArray.length - 1]
     console.log(mayorNum[0])
-  }
+}
