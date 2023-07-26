@@ -38,3 +38,15 @@ function proyeccionPorPersona(nombrePersona){
     const nuevoSalario = aumento + ultimoSalario
     return nuevoSalario
 }
+const empresas = {}
+salarios.forEach(persona => persona.trabajos.forEach(trabajo => {
+    if(!empresas[trabajo.empresa]){
+        empresas[trabajo.empresa] = {}
+    }
+    if(!empresas[trabajo.empresa][trabajo.year]){
+        empresas[trabajo.empresa][trabajo.year] =[]
+    }
+    empresas[trabajo.empresa][trabajo.year].push(trabajo.salario)
+    }
+))
+console.log(empresas)
