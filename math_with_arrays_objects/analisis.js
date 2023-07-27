@@ -49,4 +49,33 @@ salarios.forEach(persona => persona.trabajos.forEach(trabajo => {
     empresas[trabajo.empresa][trabajo.year].push(trabajo.salario)
     }
 ))
-console.log(empresas)
+
+function encontrarEmpresa(empresaEnBusqueda) {
+    return empresas[empresaEnBusqueda]
+}
+function medianaDeAnio(nombreEmpresa){
+    const empresaElegida = Object.entries(encontrarEmpresa(nombreEmpresa))
+
+    console.log(empresaElegida)
+    const medianasEmpresa = []
+    empresaElegida.forEach(element => medianasEmpresa.push(Platzi_math.median(element[1])))
+
+    let porcentajesCrecimiento = []
+
+    for (i = 1; i < medianasEmpresa.length; i++) {
+        const salarioActual = medianasEmpresa[i]
+
+        const salarioPasado = medianasEmpresa[i-1]
+
+        const crecimeinto = salarioActual - salarioPasado
+
+        const porcentajeCrecimiento = crecimeinto/salarioPasado
+
+        porcentajesCrecimiento.push(porcentajeCrecimiento)
+    }
+    const medianaPorcentajeCrecimiento = Platzi_math.median(porcentajesCrecimiento)
+    const ultimoSalario = medianasEmpresa[medianasEmpresa.length -1] 
+    const aumento = ultimoSalario*medianaPorcentajeCrecimiento
+    const nuevoSalario = aumento + ultimoSalario
+    return nuevoSalario
+}
