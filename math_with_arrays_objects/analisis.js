@@ -11,7 +11,7 @@ function medianaPorPersona(nombrePersona){
         return elemento.salario
     })
     const medianaSalarios = Platzi_math.median(salarios)
-    console.log(salarios)
+
     return medianaSalarios
 }
 
@@ -78,4 +78,26 @@ function medianaDeAnio(nombreEmpresa){
     const aumento = ultimoSalario*medianaPorcentajeCrecimiento
     const nuevoSalario = aumento + ultimoSalario
     return nuevoSalario
+}
+
+function medianaGeneral () {
+    const listaMedianas = salarios.map(persona => medianaPorPersona(persona.name))
+    
+    const mediana = Platzi_math.median(listaMedianas)
+    
+    return mediana
+}
+
+function TopMedianas () {
+    const listaMedianas = salarios.map(persona => medianaPorPersona(persona.name))
+
+    const medianasOrdenadas = listaMedianas.sort((a,b) => a-b)
+    const cantidad = listaMedianas.length / 10
+    const topDiez = []
+    for (i = 0; i < cantidad; i++){
+        topDiez.push(medianasOrdenadas.sort((a,b) => b-a)[i])
+    } 
+
+    const medianaTopDiez = Platzi_math.median(topDiez)
+    return medianaTopDiez
 }
