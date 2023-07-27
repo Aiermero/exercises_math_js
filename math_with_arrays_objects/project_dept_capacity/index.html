@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dept Capacity Calculator</title>
+</head>
+<body> 
+   <main>
+    <div class="cuadro-calculo">
+
+        <p>Ingresos netos</p>
+        <input type="number" class="ingresos-netos">
+        <p>Tus ingresos netos son todo el dinero que ingresa mensualmente</p>
+        
+        <p>Gastos netos</p>
+        <input type="number" class="gastos-netos">
+        <p>Tus gastos netos es todo el dinero que gastas para tus necesidades mensualmente</p>
+        
+        <p>Deuda actual</p>
+        <input type="number" class="deuda-actual">
+        <p>Tu deuda actual es todo el dinero que tienes que pagar mensualmente de los creditos que has sacado</p>
+
+        <p>Ingreso disponible <p class="ingreso-actual"></p><button class="ingreso-disponible">Calcular</button></p>
+       
+        <div>
+            <p class="ingreso-actual"></p>
+        </div>
+
+        <p>Ingresa la cantidad de prestamo que vas a adquirir</p>
+        <input type="number" class="prestamo">
+        <p>¿A cuántos meses vas a diferirlo?</p>
+        <input type="number" class="meses-diferir">
+        <p>¿Cuánto es el interes mensual?</p>
+        <input type="number" class="porcentaje"><p>%</p>
+
+        <div>
+            <p class="pago-mensual"></p>
+        </div>
+        <p>Tu deuda total es <p class="deuda-total"></p><button class="calcular-deuda">Calcular</button></p>
+        <p>Tu capacidad de endeudamiento es:</p>
+    </div>
+    <button class="boton-consola">Boton consola</button>
+   </main>
+   <script src="./dept_capacity.js"></script>
+</body>
+</html>
