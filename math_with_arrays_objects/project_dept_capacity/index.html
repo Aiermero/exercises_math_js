@@ -3,44 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./project_dept_style.css">
     <title>Dept Capacity Calculator</title>
 </head>
 <body> 
+    <header>
+        <div class="encabezado">
+            <h1>Calculemos tu ingreso Disponible</h1>
+        </div>
+    </header>
    <main>
-    <div class="cuadro-calculo">
+        <div class="fondo">
+            <div class="cuadro-calculo">
+                <div class="encabezado-calc">
+                    <div class="ingreso-disponible-letras"><p>Ingreso Disp:</p></div>
+                    <div class="ingreso-disponible-num"></div>
+                </div>
+                <div class="cuadro-ingresos">
+                    <p class="titulos">Ingresos netos</p>
+                    <input type="number" class="ingresos-netos">
+                    <p class="instrucciones">Tus ingresos netos son todo el dinero que ingresa mensualmente</p>
+                            
+                    <p class="titulos">Gastos netos</p>
+                    <input type="number" class="gastos-netos">
+                    <p class="instrucciones">Tus gastos netos es todo el dinero que gastas para tus necesidades mensualmente</p>
+                                
+                    <p class="titulos">Deuda actual</p>
+                    <input type="number" class="deuda-actual">
+                    <p class="instrucciones">Tu deuda actual es todo el dinero que tienes que pagar mensualmente de los creditos que has sacado</p>
+                    <button class="ingreso-disponible-calcular">Calcular</button>
+                            
+                </div>
+                <div class="cuadro-deuda inactive">
+                    <p>Ingresa la cantidad de prestamo que vas a adquirir</p>
+                    <input type="number" class="prestamo">
 
-        <p>Ingresos netos</p>
-        <input type="number" class="ingresos-netos">
-        <p>Tus ingresos netos son todo el dinero que ingresa mensualmente</p>
-        
-        <p>Gastos netos</p>
-        <input type="number" class="gastos-netos">
-        <p>Tus gastos netos es todo el dinero que gastas para tus necesidades mensualmente</p>
-        
-        <p>Deuda actual</p>
-        <input type="number" class="deuda-actual">
-        <p>Tu deuda actual es todo el dinero que tienes que pagar mensualmente de los creditos que has sacado</p>
+                    <p>¿A cuántos meses vas a diferirlo?</p>
+                    <input type="number" class="meses-diferir">
+                        
+                    <p>¿Cuánto es el interes mensual?</p>
+                    <input type="number" class="porcentaje" placeholder="Ingresa el porcentaje">
 
-        <p>Ingreso disponible <p class="ingreso-actual"></p><button class="ingreso-disponible">Calcular</button></p>
-       
-        <div>
-            <p class="ingreso-actual"></p>
-        </div>
-
-        <p>Ingresa la cantidad de prestamo que vas a adquirir</p>
-        <input type="number" class="prestamo">
-        <p>¿A cuántos meses vas a diferirlo?</p>
-        <input type="number" class="meses-diferir">
-        <p>¿Cuánto es el interes mensual?</p>
-        <input type="number" class="porcentaje"><p>%</p>
-
-        <div>
-            <p class="pago-mensual"></p>
-        </div>
-        <p>Tu deuda total es <p class="deuda-total"></p><button class="calcular-deuda">Calcular</button></p>
-        <p>Tu capacidad de endeudamiento es:</p>
-    </div>
-    <button class="boton-consola">Boton consola</button>
+                    <button class="return"> &lt </button>
+                    <button class="calcular-deuda">Calcular</button>
+                            
+                    </div>
+                </div>
+        </div>  
    </main>
    <script src="./dept_capacity.js"></script>
 </body>
