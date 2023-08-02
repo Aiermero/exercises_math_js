@@ -19,10 +19,16 @@ body{
     background-color: var(--DarkBlue);
     height: 100vh;
     width: 100vw;
+    display: flex;
+    flex-direction: column;
 }
-.encabezado{
+header{
     margin-top: 5vh;
     height: 20vh;
+}
+.encabezado{
+    height: 100%;
+    width: 100%;
 }
 h1{
     text-align: center;
@@ -36,16 +42,17 @@ h2{
 }
 main{
     height: 75vh;
-    width: 50vw;
-    width: auto;
+    width: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 .fondo{
     background-color: var(--Gray);
     padding: 0.5%;
     height: 75%;
-
+    width: 35%;
     border-radius: 40px;
 }
 p{
@@ -61,14 +68,15 @@ p{
 .encabezado-calc{
     height: 15%;
     width: 100%;
-    justify-content:baseline;
     padding-left: 2%;
+    display: flex;
+    justify-content: flex-start;
 }
 .encabezado-calc div{
     font-size: 2rem;
     color: var(--Gray);
     background-color: var(--White);
-    width: 100%;
+    width: 45%;
     height: 100%;
     border-top-right-radius: 40px;
 }
@@ -93,7 +101,7 @@ p{
     display: flex;
     flex-direction: column;
 }
-.cuadro-ingresos .titulos{
+.titulos{
     padding: 1.5%;
     padding-left:4%;
     font-weight: 800;
@@ -111,8 +119,6 @@ p{
 }
 .ingreso-disponible-calcular{
     align-self: center;
-}
-.ingreso-disponible-calcular{
     margin-top: 5%;
     width: 50%;
     height: 15%;
@@ -122,4 +128,55 @@ p{
     font-weight: 1000;
     font-size: 1.5rem;
     background-color: var(--Gray);
+}
+.cuadro-deuda{
+    background-color: var(--White);
+    height: 100%;
+    width: 100%;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.cuadro-deuda .titulos{
+    margin-top: 5%;
+}
+.cuadro-deuda input{
+    margin-left: 4%;
+    width: 15%;
+}
+.botones{
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-around;
+}
+.calcular-deuda{
+    width: 25%;
+    height: 100%;
+    border: none;
+    border-radius: 50px;
+    color: var(--White);
+    font-weight: 1000;
+    font-size: 1.5rem;
+    background-color: var(--Gray);
+}
+.return{
+    width: 25%;
+    height: 100%;
+    border: none;
+    border-radius: 50px;
+    color: var(--White);
+    font-weight: 1000;
+    font-size: 1.5rem;
+    background-color: var(--Gray);
+}
+.consejo-no{
+    margin-left: 4%;
+    font-size: 1.5rem;
+    padding-top: 2%;
+}
+.consejo-si{
+    margin-left: 4%;
+    font-size: 1.5rem;
+    padding-top: 2%;
 }

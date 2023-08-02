@@ -10,8 +10,8 @@
     <header>
         <div class="encabezado">
             <h1>Capacidad de deuda</h1>
-            <h2>Calculemos tu ingreso disponible</h2>
-            <h2 class="inactive">Calculemos tu nueva deuda</h2>
+            <h2 class="cal-nuevo-ingreso">Calculemos tu ingreso disponible</h2>
+            <h2 class="calc-nueva-deuda inactive">Calculemos tu nueva deuda</h2>
         </div>
     </header>
    <main>
@@ -37,20 +37,20 @@
                             
                 </div>
                 <div class="cuadro-deuda inactive">
-                    <p>Ingresa la cantidad de prestamo que vas a adquirir</p>
+                    <p class="titulos">Ingresa la cantidad de prestamo que vas a adquirir</p>
                     <input type="number" class="prestamo">
 
-                    <p>¿A cuántos meses vas a diferirlo?</p>
+                    <p class="titulos">¿A cuántos meses vas a diferirlo?</p>
                     <input type="number" class="meses-diferir">
                         
-                    <p>¿Cuánto es el interes mensual?</p>
-                    <input type="number" class="porcentaje" placeholder="Ingresa el porcentaje">
-
-                    <button class="return"> &lt </button>
-                    <button class="calcular-deuda">Calcular</button>
-                            
+                    <p class="titulos">¿Cuánto es el interes mensual?</p>
+                    <input type="number" class="porcentaje" placeholder="%">
+                    <div class="botones">
+                        <button class="return"> &lt </button>
+                        <button class="calcular-deuda">Calcular</button> 
                     </div>
                 </div>
+            </div>
         </div>  
    </main>
    <script src="./dept_capacity.js"></script>
