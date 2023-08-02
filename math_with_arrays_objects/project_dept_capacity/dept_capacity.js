@@ -11,6 +11,7 @@ const netDeptDiv = document.querySelector('.cuadro-deuda')
 const cuadroCalc = document.querySelector('.cuadro-calculo')
 const interestCalButton = document.querySelector('.calcular-deuda')
 const retunrBtn = document.querySelector('.return')
+const incomeAval = document.querySelector('.ingreso-disponible-num')
 
 /*Calculation from input*/
 let netIncomeCal = 0
@@ -29,9 +30,7 @@ function actualIncome(){
     let outcome = Number(netOutcomes.value)
     let dept = Number(actualDept.value)
     netIncomeCal = income - (outcome + dept)
-    const pIncomeAva = document.createElement('p')
-    pIncomeAva.textContent = 'Tu ingreso disponible es de: ' + netIncomeCal
-    netIncomeDiv.appendChild(pIncomeAva)
+    incomeAval.textContent = netIncomeCal
     netDeptDiv.classList.toggle('inactive')
     netIncomeDiv.classList.toggle('inactive')
 }

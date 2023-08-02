@@ -9,9 +9,11 @@
     --Gray: #999999;
     --White:#ffffff;
 }
-
-.inactive{
-    display:none
+.inactive {
+    display: none;
+}
+.cuadro-calculo .inactive{
+    display:none;
 }
 body{
     background-color: var(--DarkBlue);
@@ -25,9 +27,16 @@ body{
 h1{
     text-align: center;
     color: var(--White);
+    font-size: 4rem;
+}
+h2{
+    text-align: center;
+    color: var(--White);
+    margin-top: 5%; 
 }
 main{
     height: 75vh;
+    width: 50vw;
     width: auto;
     display: flex;
     justify-content: center;
@@ -35,8 +44,8 @@ main{
 .fondo{
     background-color: var(--Gray);
     padding: 0.5%;
-    height: 50vh;
-    width: 50vw;
+    height: 75%;
+
     border-radius: 40px;
 }
 p{
@@ -44,13 +53,13 @@ p{
 }
 
 .cuadro-calculo{
-    height: 90%;
+    height: 85%;
     width: 100%;
     background-color: var(--White);
     border-radius: 40px;
 }
 .encabezado-calc{
-    height: 10%;
+    height: 15%;
     width: 100%;
     justify-content:baseline;
     padding-left: 2%;
@@ -59,16 +68,19 @@ p{
     font-size: 2rem;
     color: var(--Gray);
     background-color: var(--White);
-    width: 25%;
+    width: 100%;
     height: 100%;
+    border-top-right-radius: 40px;
 }
 .ingreso-disponible-letras{
     border-top-left-radius: 40px;
 }
 .ingreso-disponible-letras p{
-    margin-left: 10%;
+    margin-left: 2%;
+    font-size: 1.5rem;
+    padding-top: 2%;
 }
-.ingreso-disponible-num{
+.ingreso-disponible-num-div{
     border-top-right-radius: 40px;
 }
 
@@ -78,17 +90,36 @@ p{
     width: 100%;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
+    display: flex;
+    flex-direction: column;
 }
 .cuadro-ingresos .titulos{
     padding: 1.5%;
     padding-left:4%;
     font-weight: 800;
+    
 }
 .cuadro-ingresos .instrucciones{
     padding: 1.5%;
     padding-left: 4%;
     font-size: 0.8rem;
+    margin-top: 3%;
 }
 .cuadro-ingresos input{
     margin-left: 4%;
+    width: 15%;
+}
+.ingreso-disponible-calcular{
+    align-self: center;
+}
+.ingreso-disponible-calcular{
+    margin-top: 5%;
+    width: 50%;
+    height: 15%;
+    border: none;
+    border-radius: 50px;
+    color: var(--White);
+    font-weight: 1000;
+    font-size: 1.5rem;
+    background-color: var(--Gray);
 }
